@@ -13,5 +13,5 @@ for /L %i in (1,1,255) do @ping -n 1 -w 200 10.0.0.%i | find "TTL"
 
 ## Port scan in powershell.exe
 ```
-1..1024 | | % {echo (( new-object Net.Sockets.TcpClient.Connect("INSERT_IP_ADDR_HERE",$_)) "Port $_ is open" } 2>$null
+1..1024 | % {echo ((new-object Net.Sockets.TcpClient).Connect("INSERT_IP_HERE",$_)) "Port $_ is open" } 2>$null
 ```
