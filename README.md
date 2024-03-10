@@ -13,7 +13,8 @@ Powershell window will appear inactive, just be patient.
 ```
 
 ## Port scan in powershell.exe
-Powershell window will appear inactive, just be patient.
+Note that scanning from 1 to 1024 takes a SUPER LONG TIME.
+Narrow down to just a few ports instead.
 ```
 1..1024 | % {echo ((new-object Net.Sockets.TcpClient).Connect("INSERT_IP_HERE",$_)) "Port $_ is open" } 2>$null
 ```
